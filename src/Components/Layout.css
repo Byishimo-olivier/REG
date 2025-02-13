@@ -1,0 +1,355 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f8f9fa;
+}
+
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+
+.logo img {
+  max-width: 120px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+}
+
+.menu a:hover {
+  background-color: #f5f5f5;
+}
+
+.main-content {
+  flex: 1;
+  background-color: #2C3E50;
+  padding: 30px;
+  margin-left: 250px;
+  width: calc(100vw - 250px);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.main-content header {
+  background: #2C3E50;
+  padding: 20px 30px;
+  margin: -30px -30px 30px -30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-content header h2 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+
+.calendar-container {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  height: calc(100vh - 140px);
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: auto;
+}
+
+.top-bar h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.search-bar input {
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 350px;
+  font-size: 15px;
+}
+
+.others {
+  margin-top: auto;
+}
+
+.logout {
+  color: #dc3545 !important;
+}
+
+.task-references {
+  padding: 20px 10px;
+  margin: 20px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.task-references h4 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.task-types {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.color-box {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.color-box.complete {
+  background-color: #28a745;
+}
+
+.color-box.appending {
+  background-color: #ffc107;
+}
+
+.color-box.missed {
+  background-color: #dc3545;
+}
+
+.task-type span {
+  font-size: 13px;
+  color: #666;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #f8f9fa;
+}
+
+.user-profile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-profile span {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.notifications button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #f8f9fa;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.search-bar input {
+  border: none;
+  background: none;
+  padding: 8px;
+  width: 300px;
+  outline: none;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Add dark theme styles */
+.app-container.dark-theme {
+  background-color: #2c3e50;
+}
+
+.main-content.dark-theme {
+  background-color: #2c3e50;
+}
+
+.main-content.dark-theme header {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.main-content.dark-theme header h2 {
+  color: white;
+}
+
+/* Add Task Button Styles */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.add-task-button {
+  background: #1e2c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.add-task-button:hover {
+  background: #0056b3;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  width: 500px;
+  animation: modalFadeIn 0.3s ease;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+.sidebar-add-task {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 8px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-add-task:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+.plus-icon {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Dark theme adjustments */
+.dark-theme .sidebar-add-task {
+  background: #34495e;
+}
+
+.dark-theme .sidebar-add-task:hover {
+  background: #2c3e50;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar-add-task {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+} 
