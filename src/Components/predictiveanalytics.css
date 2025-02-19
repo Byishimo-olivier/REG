@@ -113,7 +113,8 @@ header {
 /* Profile */
 .profile-section {
   border-radius: 0.5rem;
-  display: flex;
+  display:flex;
+  height: auto;
   align-items: center;
   gap: 0.75rem;
 }

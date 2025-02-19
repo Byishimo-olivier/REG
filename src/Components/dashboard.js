@@ -72,13 +72,13 @@ const Dashboard = () => {
       {/* Main Content */}
       <div className="main-content">
         <div className="header">
-          <h1>Dashboard</h1>
+          <h1>Customer Engagement</h1>
           <div className="header-right">
             <div className="search-bar">
               <input type="text" placeholder="Search for Everything" />
               <button className="search-btn">🔍</button>
             </div>
-            <div className="user-info">
+            <div className="user-profile">
               <img src={profile} alt="Profile" />
               <span>C.Prince</span>
             </div>

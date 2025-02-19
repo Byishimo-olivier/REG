@@ -51,18 +51,23 @@
     color: #ff4d4f;
   }
   
-  /* Main Content Styles */
-  .main-content {
+   /* Main Content */
+   .main-content {
     flex: 1;
+    background-color: #f8f9fa;
     padding: 20px;
   }
   
-  /* Header Styles */
-  header {
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    margin: 0;
   }
   
   .header-right {
@@ -72,21 +77,21 @@
   }
   
   .search-bar {
-    position: relative;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+    padding: 5px 10px;
   }
   
   .search-bar input {
-    padding: 10px 40px 10px 15px;
-    border-radius: 20px;
-    border: 1px solid #e8e8e8;
-    width: 300px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 200px;
   }
   
-  .search-bar button {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
+  .search-btn {
     background: none;
     border: none;
     cursor: pointer;
@@ -99,11 +104,17 @@
   }
   
   .user-profile img {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
   }
   
+  .notification-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
   /* Map Section Styles */
   .map-section {
     background: white;

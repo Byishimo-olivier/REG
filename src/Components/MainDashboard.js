@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Sidebar from './Sidebar';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -38,10 +39,8 @@ ChartJS.register(
 );
 
 const Dashboard = () => {
-  // Example position for center of map
   const position = [-1.9403, 29.8739]; // Rwanda coordinates
 
-  // Updated grid health data to match the design
   const gridHealthData = {
     labels: ['Offline', 'Online', 'Standby'],
     datasets: [{
@@ -67,7 +66,6 @@ const Dashboard = () => {
     circumference: 360,
   };
 
-  // Updated energy flow data to match the design
   const energyFlowData = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     datasets: [
@@ -122,55 +120,10 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="dashboard-container">
-      {/* Sidebar */}
-      <div className="sidebar">
-        <div className="logo">
-          <img src={logo} alt="REG Logo" />
-        </div>
-        <nav className="menu-section">
-          <span className="menu-label">MENU</span>
-          <Link to="/" className="menu-item active">
-            <div className="menu-icon">🏠</div>
-            <span>Home</span>
-          </Link>
-          <Link to="/NetworkPlanning" className="menu-item">
-            <div className="menu-icon">🔌</div>
-            <span>Network Planning</span>
-          </Link>
-          <Link to="/maintenance" className="menu-item">
-            <span>⚙️</span> Operations & Maintenance
-          </Link>
-          <Link to="/fault-detection" className="menu-item">
-            <span>🔍</span> Fault Detection
-          </Link>
-          <Link to="/predictive-analytics" className="menu-item">
-            <span>📊</span> Predictive Analytics
-          </Link>
-          <Link to="/customer-engagement" className="menu-item">
-            <span>👥</span> Customer Engagement
-          </Link>
-          <Link to="/reporting" className="menu-item">
-            <span>📝</span> Reporting
-          </Link>
-          <Link to="/kpi" className="menu-item">
-            <span>📊</span> KPIs
-          </Link>
-        </nav>
-        <div className="menu">
-          <h3>OTHERS</h3>
-          <ul>
-            <li><span>❓</span> Help Centre</li>
-            <Link to="/settings" className="menu-item">
-            <li><span>⚙️</span> Setting</li>
-            </Link>
-            <li className="logout"><span>🚪</span> Log out</li>
-          </ul>
-        </div>
-      </div>
+    <div className="dashboard-wrapper">
+      <Sidebar />
 
       <div className="main-content">
-        {/* Header */}
         <header className="dashboard-header">
           <div className="header-left">
             <h1>Dashboard</h1>
@@ -188,7 +141,6 @@ const Dashboard = () => {
           </div>
         </header>
 
-        {/* Map Section */}
         <div className="map-section">
           <div className="map-filters">
             <button className="filter-btn customer">Customer Zones</button>
@@ -215,7 +167,6 @@ const Dashboard = () => {
           </div>
         </div>
 
-        {/* Stats Grid */}
         <div className="stats-grid">
           <div className="left-column">
             <div className="grid-health-card">

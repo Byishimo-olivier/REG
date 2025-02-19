@@ -138,8 +138,8 @@ const GridPlanning = () => { // Changed component name to match file
           <h3>MENU</h3>
           <ul>
             <li><Link to="/"><span>🏠</span> Home</Link></li>
-            <li><Link to="/gridplanning"><span>🔌</span> GridPlanning</Link></li>
-            <li><Link to="/operations"><span>⚙️</span> Operations & Maintenance</Link></li>
+            <li><Link to="/NetworkPlanning"><span>🔌</span> NetworkPlanning</Link></li>
+            <li><Link to="/maintenance"><span>⚙️</span> Operations & Maintenance</Link></li>
             <li><Link to="/fault-detection"><span>🔍</span> Fault Detection</Link></li>
             <li><Link to="/predictive-analytics"><span>📊</span> Predictive Analytics</Link></li>
             <li><Link to="/customer-engagement"><span>👥</span> Customer Engagement</Link></li>
